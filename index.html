@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SBS Tecnologia Móvel</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    
+
+    <style>
+       /* ==========================
+   RESET
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* ==========================
+   HEADER
+========================== */
+.header {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px 60px;
+    overflow: hidden;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 90px;
+    font-weight: bold;
+    color: #d4af37;
+    text-shadow: 0 0 30px rgba(212, 175, 55, 0.9);
+    letter-spacing: 6px;
+    animation: brilho 2s ease-in-out infinite alternate;
+}
+
+@keyframes brilho {
+    from { text-shadow: 0 0 10px rgba(212, 175, 55, 0.6); }
+    to { text-shadow: 0 0 35px rgba(212, 175, 55, 1); }
+}
+
+.icon {
+    font-size: 70px;
+    color: #d4af37;
+    animation: girar 5s linear infinite;
+}
+
+
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.subtitulo {
+    font-size: 30px;
+    color: #d4af37;
+    margin-top: 10px;
+}
+
+.telefone-profissional a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #d4af37;
+    font-weight: bold;
+    padding: 1.8px 10px;
+    border-radius: 18px;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6); /* brilho suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 18px;
+}
+
+.telefone-profissional a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.9);
+}
+
+.telefone-profissional i {
+    font-size: 22px;
+}
+
+
+/* ========   HERO ========  */
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    color: #d4af37;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.hero-text button {
+    background-color: #d4af37;
+    color: #000;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-text button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 1);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+    opacity: 0.5;
+}
+
+/* RESPONSIVIDADE PARA CELULAR */
+@media (max-width: 768px) {
+    .hero-content {
+        display: flex;
+        flex-direction: column-reverse; /* imagem acima do texto */
+        text-align: center;
+        align-items: center;
+        margin-top: 30px; /* espaçamento do topo */
+    }
+
+    .hero-image {
+        margin-bottom: 20px; /* espaço entre imagem e texto */
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .hero-image img {
+        max-width: 80%;
+    }
+}
+
+
+/* ==========================
+   PRODUTOS & SERVIÇOS
+========================== */
+.produtos-servicos {
+    padding: 60px 20px;
+    background-color: #000;
+    text-align: center;
+}
+
+.produtos-servicos h2 {
+    font-size: 32px;
+    color: #d4af37;
+    margin-bottom: 50px;
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+    font-weight: bold;
+}
+
+.produtos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    align-items: stretch;
+}
+
+.produto-card {
+    background: linear-gradient(145deg, #111, #1a1a1a);
+    border: 1px solid rgba(212,175,55,0.4);
+    border-radius: 15px;
+    padding: 25px 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.5);
+}
+
+.produto-card i {
+    font-size: 45px;
+    color: #d4af37;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.produto-card i:hover {
+    transform: scale(1.1);
+}
+
+.produto-card h3 {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.produto-card p {
+    font-size: 16px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+  /* ======== FEEDBACKS ======== */
+.feedbacks {
+    padding: 60px 20px;
+    background-color: #111;
+    text-align: center;
+}
+
+.feedbacks h2 {
+    font-size: 32px;
+    color: #d4af37;
+    margin-bottom: 40px;
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+}
+
+.feedbacks-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feedback-card {
+    background-color: #000;
+    border: 2px solid #d4af37;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feedback-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.7);
+}
+
+.feedback-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.feedback-card h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.feedback-card p {
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .feedbacks-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feedback-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+/* ==========================
+   FORMULÁRIO & CONTATO
+========================== */
+
+.contato {
+    background-color: #111;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 32px;
+    color: #d4af37;
+    margin-bottom: 30px;
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+}
+
+.form-destaque {
+    max-width: 500px;
+    margin: 0 auto; /* Centraliza o formulário */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: linear-gradient(145deg, #111, #1a1a1a);
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.form-destaque {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: linear-gradient(145deg, #111, #1a1a1a);
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-destaque:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.8);
+}
+
+.form-destaque input,
+.form-destaque select,
+.form-destaque textarea {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #d4af37;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-destaque input:focus,
+.form-destaque select:focus,
+.form-destaque textarea:focus {
+    border-color: #ffd700;
+    box-shadow: 0 0 10px #d4af37;
+    outline: none;
+}
+
+.form-destaque button[type="submit"] {
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: #d4af37;
+    color: #000;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-destaque button[type="submit"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.8);
+}
+
+/* ==========================
+   RODAPÉ
+========================== */
+footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+    margin-top: 40px;
+    border-top: 1px solid #222;
+}
+
+.footer-icon {
+    color: #d4af37;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-icon:hover {
+    transform: scale(1.2);
+    color: #ffd700;
+}
+
+footer p {
+    margin-top: 10px;
+    color: #888;
+    font-size: 14px;
+}
+
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+@media (max-width: 900px) {
+    .hero-content { flex-direction: column; text-align: center; gap: 30px; }
+    .hero-text { text-align: center; margin-left: 0; }
+    .hero-image { justify-content: center; margin-right: 0; }
+    .hero-image img { max-width: 80%; }
+    .produtos-container { flex-direction: column; align-items: center; }
+    .produto-card { width: 90%; }
+}
+
+@media (max-width: 768px) {
+    .logo { font-size: 60px; }
+    .icon { font-size: 50px; }
+    .hero h1 { font-size: 28px; }
+}
+
+
+/* DIFERENCIAIS */
+.diferenciais {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #000;
+}
+.diferenciais h2 {
+    font-size: 32px;
+    color: #d4af37;
+    margin-bottom: 40px;
+    text-shadow: 0 0 12px rgba(212,175,55,0.6);
+}
+.diferenciais-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.diferencial-card {
+    background-color: #111;
+    border: 2px solid #d4af37;
+    padding: 25px;
+    border-radius: 12px;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.diferencial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(212,175,55,0.7);
+}
+.diferencial-card i {
+    font-size: 40px;
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+.diferencial-card h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+.diferencial-card p {
+    color: #ccc;
+}
+/* ======== BLINDAGEM PREMIUM (COMPACTA + CENTRALIZADA) ======== */
+.blindagem {
+    padding: 40px 15px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blindagem-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    gap: 30px;
+    max-width: 1100px;
+    width: 100%;
+    flex-wrap: wrap;
+    text-align: center; /* Centraliza o conteúdo interno */
+}
+
+.blindagem-texto {
+    flex: 1;
+    max-width: 520px;
+    margin: 0 auto; /* Garante centralização */
+}
+
+.blindagem-texto h2 {
+    font-size: 28px;
+    color: #d4af37;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.blindagem-texto p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.blindagem-texto ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.blindagem-texto ul li {
+    font-size: 15px;
+    color: #ccc;
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza os itens da lista */
+    gap: 6px;
+}
+
+.blindagem-texto ul li i {
+    color: #d4af37;
+    font-size: 16px;
+}
+
+.botao-blindagem {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #d4af37;
+    color: #000;
+    padding: 10px 22px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
+}
+
+.botao-blindagem:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.9);
+}
+
+.blindagem-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.blindagem-img img {
+    max-width: 360px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.blindagem-img img:hover {
+    transform: scale(1.04);
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .blindagem-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .blindagem-img img {
+        max-width: 70%;
+        margin-top: 15px;
+    }
+}
+
+ </style>
+</head>
+<body oncontextmenu="return false;" onselectstart="return false;">
+
+
+    <!-- HEADER -->
+    <header class="header">
+        <div id="particles-js"></div>
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo">SBS</div>
+                <i class="fas fa-cogs icon"></i>
+            </div>
+            <div class="subtitulo">Tecnologia Móvel</div>
+           <div class="telefone-profissional">
+    <a href="https://wa.me/5521964446258" target="_blank">
+        <i class="fab fa-whatsapp"></i> (21) 96444-6258
+    </a>
+</div>
+
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Assistência Técnica e Acessórios Premium</h1>
+                <p>Blindagem de celular, consertos e os melhores acessórios tecnológicos do mercado. Qualidade e confiança para o seu smartphone!</p>
+                <button onclick="enviarWhatsAppHero()">Solicitar Orçamento</button>
+            </div>
+            <div class="hero-image">
+                <img src="img_01.jpg" alt="serviços tecnológicos">
+            </div>
+        </div>
+    </section>
+    
+<!-- DIFERENCIAIS -->
+<section class="diferenciais" id="diferenciais">
+    <h2>Por que escolher a SBS Tecnologia Móvel?</h2>
+    <div class="diferenciais-container">
+
+
+        <div class="diferencial-card">
+            <i class="fas fa-headset"></i>
+            <h3>Atendimento Personalizado</h3>
+            <p>Suporte dedicado para entender sua necessidade e oferecer a melhor solução.</p>
+        </div>
+
+         <div class="diferencial-card">
+            <i class="fas fa-tools"></i>
+            <h3>Assistência Especializada</h3>
+            <p>Equipe experiente para manutenção, reparos e upgrades rápidos e seguros.</p>
+        </div>
+      <!-- BLINDAGEM PREMIUM -->
+<section class="blindagem" id="blindagem">
+    <div class="blindagem-container">
+        <div class="blindagem-texto">
+            <h2>Blindagem Premium</h2>
+            <p>
+                Nossa blindagem premium utiliza <strong>tecnologia de ponta</strong> para criar uma camada
+                extra de proteção contra riscos, quedas, impactos e até mesmo líquidos.  
+                Ideal para quem deseja <strong>durabilidade máxima</strong> e <strong>segurança completa</strong>
+                sem perder a estética do aparelho.
+            </p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Camada invisível, sem alterar o design</li>
+                <li><i class="fas fa-check-circle"></i> Proteção contra quedas e impactos</li>
+                <li><i class="fas fa-check-circle"></i> Garantia de aplicação perfeita</li>
+                <li><i class="fas fa-check-circle"></i> Tecnologia de alta resistência</li>
+                
+            </ul>
+            <a href="https://wa.me/5521964446258" target="_blank" class="botao-blindagem">
+                <i class="fab fa-whatsapp"></i> Solicitar Blindagem Premium
+            </a>
+        </div>
+    </div>
+</section>
+
+      
+        <div class="diferencial-card">
+            <i class="fas fa-gem"></i>
+            <h3>Acessórios Premium</h3>
+            <p>Produtos de alta qualidade para quem busca durabilidade, estilo e desempenho.</p>
+        </div>
+       
+</section>
+
+    <!--SERVIÇOS & PRODUTOS -->
+<section class="produtos-servicos">
+    <h2>Serviços & Produtos</h2>
+    <div class="produtos-container">
+        <div class="produto-card">
+            <i class="fas fa-video"></i>
+            <h3>Segurança Eletrônica</h3>
+            <p>Monitoramento e proteção com equipamentos Intelbrás e Motorola.</p>
+        </div>
+        <div class="produto-card">
+            <i class="fas fa-tools"></i>
+            <h3>Manutenção de Celular</h3>
+            <p>Consertos profissionais de marcas como Kaid, Ogold, Inova e Hebbos.</p>
+        </div>
+        <div class="produto-card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Acessórios para Celular</h3>
+            <p>Todos os tipos de acessórios para celular: capa, película, cabo...</p>
+        </div>
+        <div class="produto-card">
+            <i class="fas fa-headphones-alt"></i>
+            <h3>Eletrônicos & Smart Devices</h3>
+            <p>Caixas de som, smartwatches e gadgets tecnológicos de última geração.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- FEEDBACKS -->
+<section class="feedbacks" id="feedbacks">
+    <h2>O que nossos clientes dizem:</h2>
+    <div class="feedbacks-container">
+        <div class="feedback-card">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente 1">
+            <h3>João Silva</h3>
+            <p>"Excelente serviço! Meu celular foi consertado rapidamente e com qualidade."</p>
+        </div>
+        <div class="feedback-card">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Cliente 2">
+            <h3>Maria Oliveira</h3>
+            <p>"Adorei os acessórios! A capinha e a película chegaram perfeitas."</p>
+        </div>
+        <div class="feedback-card">
+            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Cliente 3">
+            <h3>Carlos Pereira</h3>
+            <p>"O atendimento foi muito profissional. Recomendo a SBS Tecnologia Móvel!"</p>
+        </div>
+    </div>
+</section>
+
+
+  <!-- ==========================
+     FORMULÁRIO & CONTATO
+========================== -->
+<section class="contato" id="contato">
+    <h2>Solicite um Orçamento</h2>
+   <form class="form-destaque" action="#" method="POST" onsubmit="enviarWhatsApp(event)">
+
+        <!-- Nome -->
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+
+        <!-- Telefone -->
+        <input type="tel" name="telefone" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
+
+        <!-- Modelo do Telefone -->
+        <input type="text" name="modelo" id="modelo" placeholder="Modelo do telefone (Ex: iPhone 13, Samsung S23)" required>
+
+        <!-- Seleção de Serviço ou Produto -->
+        <select name="servico" id="servico" required>
+            <option value="" disabled selected>Selecione o serviço ou produto</option>
+            <option value="blindagem">Blindagem Premium</option>
+            <option value="troca_tela">Troca de Tela</option>
+            <option value="troca_conector">Troca Conector de Carga</option>
+            <option value="troca_bateria">Troca de Bateria</option>
+            <option value="reparos">Reparos em geral</option>
+            <option value="acessorios">Acessórios Premium</option>
+            <option value="outro">Outro</option>
+        </select>
+
+        <!-- Botão -->
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+
+   
+
+    <!-- RODAPÉ -->
+
+  <footer>
+    <a href="https://wa.me/5521964446258" target="_blank" class="footer-icon">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.facebook.com/SBSBLINDAGENS/" target="_blank" class="footer-icon">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com/sbsblindagens?igsh=MWV2d2Y1bXk2bjhucQ==" target="_blank" class="footer-icon">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <p>&copy; 2025 SBS Tecnologia Móvel | Desenvolvido por Jeniffer Carvalho | Todos os direitos reservados.</p>
+</footer>
+
+
+    <script>
+        // Enviar WhatsApp Hero
+        function enviarWhatsAppHero() {
+            const numeroWhats = '5521964446258';
+            const texto = 'Olá, gostaria de solicitar um orçamento!';
+            const url = `https://wa.me/${numeroWhats}?text=${encodeURIComponent(texto)}`;
+            window.open(url, '_blank');
+        }
+
+        // Enviar WhatsApp Formulário
+       function enviarWhatsApp(event) {
+    event.preventDefault();
+
+    const nome = document.getElementById('nome').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const modelo = document.getElementById('modelo').value.trim();
+    const servico = document.getElementById('servico').value;
+
+    if (!nome || !telefone || !modelo || !servico) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+    }
+
+    const numeroWhats = '5521964446258';
+    const texto = `Olá, meu nome é ${nome}.\nTelefone: ${telefone}\nModelo do telefone: ${modelo}\nServiço/Produto: ${servico}`;
+    const url = `https://wa.me/${numeroWhats}?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, '_blank');
+
+    // Limpa campos após envio
+    document.getElementById('nome').value = '';
+    document.getElementById('telefone').value = '';
+    document.getElementById('modelo').value = '';
+    document.getElementById('servico').value = '';
+}
+
+
+
+        // Particles.js
+
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80 },
+                "size": { "value": 2 },
+                "color": { "value": "#d4af37" },
+                "line_linked": { "enable": true, "distance": 120, "color": "#d4af37", "opacity":0.5, "width":1 },
+                "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out" }
+            },
+            "interactivity": {
+                "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" } },
+                "modes": { "grab": { "distance": 180, "line_linked": { "opacity": 1 } } }
+            }
+        });
+
+   
+
+    </script>
+</body>
+</html>
