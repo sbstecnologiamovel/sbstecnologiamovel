@@ -17,7 +17,7 @@ HTML5
 CSS3
 JavaScript
 Como Visualizar
-Para acessar o site, abra o arquivo no seu navegador ou visite nosso GitHub Pages.index.html
+Para acessar o site, abra o arquivo no seu navegador ou clique neste link https://sbstecnologiamovel.github.io/sbstecnologiamovel/
 
 Contato
 Telefone: (21) 96444-6258
