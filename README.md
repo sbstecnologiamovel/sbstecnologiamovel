@@ -11,11 +11,13 @@ Serviços Oferecidos:
 -Restauração de software
 -Reparos em geral
 -Acessórios
--Tecnologias Utilizadas
 
-HTML5
-CSS3
-JavaScript
+Tecnologias Utilizadas:
+
+-HTML5
+-CSS3
+-JavaScript
+
 Como Visualizar
 Para acessar o site, abra o arquivo no seu navegador ou clique neste link https://sbstecnologiamovel.github.io/sbstecnologiamovel/
 
